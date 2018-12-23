@@ -46,6 +46,7 @@ namespace ConsoleApp1
             };
             HttpResponseMessage response = client.PostAsJsonAsync(
                 "activity", request).Result;
+            //Console.WriteLine(response.StatusCode);
         }
 
         public static void SetUp()

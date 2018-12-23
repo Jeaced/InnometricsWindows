@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{D528BAE5-552F-4C30-895F-58E92E55B549}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innometrics", "ConsoleApp1\Innometrics.csproj", "{D528BAE5-552F-4C30-895F-58E92E55B549}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
