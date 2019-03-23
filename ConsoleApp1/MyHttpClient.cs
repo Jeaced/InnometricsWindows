@@ -24,6 +24,9 @@ namespace ConsoleApp1
             //response.EnsureSuccessStatusCode();
             response = client.PostAsJsonAsync(
                 "login", user).Result;
+            if (!response.IsSuccessStatusCode) {
+                throw new HttpRequestException();
+            }
             Uri uri = new Uri("https://innometric.guru");
             IEnumerable<Cookie> responseCookies = cookies.GetCookies(uri).Cast<Cookie>();
             foreach (Cookie cookie in responseCookies)

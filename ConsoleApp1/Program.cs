@@ -53,11 +53,26 @@ namespace ConsoleApp1
                 }
 
             }
-            catch
+            catch (System.Net.Http.HttpRequestException)
+            {
+                canProceed = false;
+                session = "";
+                Console.WriteLine("Unable to sign in or sign up using provided credentials");
+                Console.ReadLine();
+            }
+            catch (AggregateException)
+            {
+                canProceed = false;
+                session = "";
+                Console.WriteLine("Unable to sign in or sign up using provided credentials");
+                Console.ReadLine();
+            }
+            catch (Exception)
             {
                 session = "";
                 canProceed = false;
                 Console.WriteLine("There was a mistake during read/write of session file try to run the app again");
+                Console.ReadLine();
             }
             //ShowWindow(consoleHandle, SW_HIDE);
             if (canProceed)
